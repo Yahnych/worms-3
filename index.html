@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Worm movements with perlin noise</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+		button {
+			/*position: absolute;*/
+			/*top: 50px;*/
+		}
+		#note {
+			position: absolute;
+			top: 150px;
+			left: 550px;
+			border: 2px solid black;
+			width: 350px;
+			height: 350px;
+		}
+		#max {
+			position: absolute;
+			top: 15px;
+			left: 320px;
+		}
+	</style>
+</head>
+<body>
+	<p>&emsp;Speed Range</p>
+	&emsp;Mode:<br>
+	&emsp;<input type="radio" name="mode" id="random" checked> Turbulent &emsp;
+	<input type="radio" name="mode"> Perlin <br><br>
+	&emsp;<button id='kill' onclick="killWorm()">Kill</button><br>
+	<div id='max'>
+		Max Worms:&emsp;
+		<input type="number" value="10" id="mworms"><br><br>
+		Worm Count: &emsp; <span id='wc'></span>
+
+
+		
+	</div>
+	<div id='note'>
+		<ul>
+			<li>Tap on the canvas to generate worms</li><br>
+			<li>Adjust speed with the slider</li><br>
+			<li>Use the radio buttons to select movement type</li><br>
+			<li>Press the button to kill</li><br>
+			<li>Edit the text box to set upper bound</li>
+		</ul>
+	</div>
+
+</body>
+</html>
